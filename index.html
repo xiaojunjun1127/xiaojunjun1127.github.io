@@ -243,12 +243,10 @@
         <article class="card" onclick="openPage('notes-page')">
           <div class="card-icon">📖</div>
           <h2>出门票｜课堂学习笔记</h2>
-          <p>整理课程知识点、课堂思考和文献阅读记录。</p>
-
+        
           <ul>
             <li>课程知识点整理</li>
             <li>课堂问题与思考</li>
-            <li>文献摘要与阅读记录</li>
           </ul>
 
           <span class="enter">查看笔记 →</span>
@@ -305,76 +303,385 @@
       </div>
     </section>
 
-    <!-- 课堂笔记页面 -->
-    <section id="notes-page" class="subpage">
-      <button class="back-button" onclick="goHome()">← 返回首页</button>
+   <!-- 出门票知识点目录 -->
+<section id="notes-page" class="subpage">
+  <button class="back-button" onclick="goHome()">← 返回首页</button>
 
-      <div class="subpage-header">
-        <h2>出门票｜课堂学习笔记</h2>
-        <p>Course Notes & Reflections</p>
-      </div>
+  <div class="subpage-header">
+    <h2>出门票｜课堂学习笔记</h2>
+    <p>Course Notes & Reflections</p>
+  </div>
 
-      <div class="content-box">
-        <h3>本节课的核心知识点</h3>
-        <p>在这里填写本节课学习到的主要概念和研究方法。</p>
-      </div>
+  <div class="content-box">
+    <h3>10.8 九个核心问题</h3>
+    <p>
+      本知识点围绕海洋混合层、温盐结构、海气热通量、
+      季节变化及温跃层维持机制，对九个核心问题进行中英文梳理。
+    </p>
 
-      <div class="content-box">
-        <h3>我学到了什么？</h3>
-        <ul>
-          <li>知识点一：在这里填写具体内容。</li>
-          <li>知识点二：在这里填写具体内容。</li>
-          <li>知识点三：在这里填写具体内容。</li>
-        </ul>
-      </div>
+    <button class="back-button" onclick="openQuestions()">
+      查看完整九个问题 →
+    </button>
+  </div>
+</section>
 
-      <div class="content-box">
-        <h3>我的思考</h3>
-        <p>
-          在这里记录课堂上产生的问题、自己的理解，以及希望继续了解的内容。
-        </p>
-      </div>
+<!-- 九个核心问题详情页 -->
+<section id="questions-page" class="subpage">
+  <button class="back-button" onclick="backToNotes()">
+    ← 返回知识点目录
+  </button>
 
-      <div class="content-box">
-        <h3>文献阅读记录</h3>
-        <p>
-          在这里填写论文题目、作者、研究方法、主要结论和阅读心得。
-        </p>
-      </div>
-    </section>
+  <div class="subpage-header">
+    <h2>10.8 九个核心问题</h2>
+    <p>Nine Core Questions · Physical Oceanography</p>
+  </div>
+
+  <div class="content-box">
+    <h3>一、风和冷却分别能形成多深的混合层？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      How deep is a typical mixed layer if mixed by wind?
+      How deep can it reach if driven by cooling?
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      由风引起的湍流混合通常形成约10—100米深的混合层，
+      具体深度取决于风速、风持续时间和原有水体层结。
+      强烈的冬季表层冷却会使海水密度增加并发生对流，
+      混合层可加深到数百米。在拉布拉多海、格陵兰海和威德尔海等
+      深对流区，极端情况下可超过1000米。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      Wind-driven turbulence typically produces a mixed layer about
+      10–100 m deep, depending on wind strength, duration, and the
+      pre-existing stratification. Strong winter surface cooling increases
+      seawater density and triggers convection, allowing the mixed layer to
+      deepen to several hundred metres. In deep-convection regions such as
+      the Labrador, Greenland, and Weddell Seas, it can exceed 1,000 m.
+    </p>
+  </div>
+
+  <div class="content-box">
+    <h3>二、北太平洋副热带与副极地海区的温盐垂直结构有何特点？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      What are the typical vertical temperature and salinity profiles in
+      the subtropical and subpolar regions of the North Pacific?
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      北太平洋副热带海区表层温暖、盐度较高，表层以下存在明显的永久温跃层，
+      温度随深度迅速降低；盐度一般也从高盐表层向下减小，并在中层出现低盐水。
+      副极地海区表层寒冷且较淡，温跃层较弱，冬季甚至接近等温；
+      盐度通常随深度增加，因为表层受到降水、融冰和较淡水体的影响。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      In the subtropical North Pacific, the surface is warm and relatively
+      saline, with a strong permanent thermocline beneath it. Temperature
+      decreases rapidly with depth, while salinity generally decreases from
+      the salty surface and may reach an intermediate-depth minimum. In the
+      subpolar North Pacific, the surface is cold and relatively fresh, the
+      thermocline is weaker, and salinity commonly increases with depth.
+    </p>
+  </div>
+
+  <div class="content-box">
+    <h3>三、海洋中哪些区域以净蒸发为主？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      What are the dominant regions of net evaporation in the ocean?
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      净蒸发主要出现在南北纬约20°—30°的副热带海区。
+      这些区域受副热带高压控制，空气干燥、降水少、太阳辐射较强，
+      因而蒸发量大于降水量。北大西洋副热带、阿拉伯海，以及地中海和红海等
+      半封闭海区的净蒸发尤其显著。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      Net evaporation is dominant mainly in the subtropical oceans around
+      20°–30° latitude in both hemispheres. These regions are controlled by
+      dry subtropical high-pressure systems, receive little rainfall, and
+      experience strong solar heating. Particularly strong net evaporation
+      occurs in the subtropical North Atlantic, the Arabian Sea, the
+      Mediterranean Sea, and the Red Sea.
+    </p>
+  </div>
+
+  <div class="content-box">
+    <h3>四、混合层热收支包括哪些主要部分？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      What are the key components of the mixed-layer heat budget?
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      混合层热收支主要包括海表净热通量、水平平流、垂向夹卷与混合、
+      穿透混合层底部的短波辐射，以及混合层厚度变化带来的影响。
+      海表净热通量又包括短波辐射、长波辐射、潜热通量和感热通量。
+      海流还可将暖水或冷水输送到研究区域，改变混合层温度。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      The mixed-layer heat budget includes the net surface heat flux,
+      horizontal heat advection, vertical entrainment and turbulent mixing,
+      penetrating shortwave radiation, and changes in mixed-layer depth.
+      The net surface heat flux consists of shortwave radiation, longwave
+      radiation, latent heat flux, and sensible heat flux.
+    </p>
+  </div>
+
+  <div class="content-box">
+    <h3>五、北大西洋平均比太平洋更咸还是更淡？为什么？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      Is the North Atlantic Ocean saltier or fresher on average than the
+      Pacific? Why?
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      北大西洋平均比北太平洋更咸。主要原因是大西洋的蒸发相对于降水更强，
+      而大气环流会把从大西洋蒸发的部分水汽输送到太平洋流域。
+      地中海高盐水的外流也会提高北大西洋盐度。
+      相比之下，北太平洋降水较多，而且没有与地中海高盐外流相当的盐源。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      The North Atlantic is saltier on average than the North Pacific.
+      Evaporation is stronger relative to precipitation over the Atlantic,
+      and atmospheric circulation transports some Atlantic water vapour
+      toward the Pacific basin. Salty Mediterranean outflow also raises
+      Atlantic salinity, whereas the North Pacific receives more
+      precipitation and lacks an equivalent high-salinity source.
+    </p>
+  </div>
+
+  <div class="content-box">
+    <h3>六、哪些海区季节差异最大，哪些区域季节变化最小？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      What regions of the ocean are characterized by large differences
+      from summer to winter? What regions have the least seasonal
+      variability?
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      中高纬度海区的季节差异最大，尤其是北半球大陆边缘、
+      湾流延伸区和黑潮延伸区。冬季强烈冷却和风混合使混合层加深，
+      夏季加热则形成浅而温暖的表层。赤道和热带海区接收的太阳辐射
+      全年变化较小，因此海表温度和混合层的季节变化通常最弱。
+      深海也因远离海气直接作用而几乎没有明显季节变化。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      The largest summer-to-winter differences occur at middle and high
+      latitudes, especially near Northern Hemisphere continental margins
+      and in the Gulf Stream and Kuroshio Extension regions. Tropical and
+      equatorial oceans generally show the weakest seasonal variability
+      because solar forcing changes less throughout the year. The deep
+      ocean also has very little seasonal variation.
+    </p>
+  </div>
+
+  <div class="content-box">
+    <h3>七、维持温跃层的两个主要过程是什么？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      Please describe the two processes that maintain the thermocline.
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      第一个过程是海表加热与风驱动环流。太阳加热维持温暖表层，
+      风应力造成的辐合、下沉和副热带俯冲把暖水输送到温跃层内部。
+      第二个过程是垂向混合与上升流，它把深层冷水缓慢带向上方，
+      并与上层暖水交换热量。暖水下沉与冷水上升、混合之间的平衡，
+      共同维持大尺度永久温跃层。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      The first process is surface heating combined with wind-driven
+      circulation: convergence, downwelling, and subtropical subduction
+      transfer warm surface water into the thermocline. The second is
+      vertical mixing and upwelling, which slowly bring cold deep water
+      upward and exchange heat across density surfaces. Their balance
+      maintains the large-scale permanent thermocline.
+    </p>
+  </div>
+
+  <div class="content-box">
+    <h3>八、哪些因素分别决定 Qs、Qb、Qe 和 Qh？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      What factors determine the heat-budget terms Qs, Qb, Qe, and Qh,
+      respectively? Make clear the importance of each factor.
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      <strong>Qs（短波辐射）</strong>主要由太阳高度、昼长、纬度、
+      季节、云量和海面反照率决定，其中太阳入射角和云量最重要。<br><br>
+
+      <strong>Qb（净长波辐射）</strong>取决于海表温度、空气温度、
+      水汽和云量。海表越暖，向上的长波辐射越强；水汽和云会增加
+      向下的大气长波辐射，减少海洋的净热损失。<br><br>
+
+      <strong>Qe（潜热通量）</strong>由风速、海表饱和比湿与近海面空气
+      比湿之差决定。风越强、空气越干、海表越暖，蒸发和潜热损失越大。<br><br>
+
+      <strong>Qh（感热通量）</strong>主要由风速以及海表与空气的温差决定。
+      当海水明显暖于空气且风速较大时，海洋通过感热向大气释放更多热量。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      <strong>Qs, shortwave radiation,</strong> depends mainly on solar
+      elevation, day length, latitude, season, cloud cover, and surface
+      albedo; incoming solar angle and clouds are especially important.<br><br>
+
+      <strong>Qb, net longwave radiation,</strong> depends on sea-surface
+      temperature, air temperature, humidity, and cloud cover. A warmer
+      surface emits more radiation, while clouds and water vapour increase
+      downward atmospheric radiation.<br><br>
+
+      <strong>Qe, latent heat flux,</strong> is controlled mainly by wind
+      speed and the humidity difference between the saturated sea surface
+      and the overlying air.<br><br>
+
+      <strong>Qh, sensible heat flux,</strong> is controlled mainly by wind
+      speed and the air–sea temperature difference.
+    </p>
+  </div>
+
+  <div class="content-box">
+    <h3>九、四种热通量的典型范围和极值区域是什么？</h3>
+
+    <p>
+      <strong>English question:</strong><br>
+      What are the ranges of the magnitude of the four terms? For each
+      term, specify the approximate location and value of its maximum and
+      minimum center.
+    </p>
+
+    <p>
+      <strong>中文回答：</strong><br>
+      下列数值是多年平均量级，不同季节、数据集和正负号约定会造成差异。<br><br>
+
+      <strong>Qs：</strong>约0—300 W/m²。最大值通常位于少云的热带和
+      副热带海区，约250—300 W/m²；最小值位于冬季极区，可接近0 W/m²。<br><br>
+
+      <strong>Qb：</strong>海洋向上的净长波热损失通常约20—120 W/m²。
+      较大值常见于温暖、干燥且少云的副热带海区，约80—120 W/m²；
+      较小值常见于寒冷极区或湿润多云区域，约20—40 W/m²。<br><br>
+
+      <strong>Qe：</strong>潜热损失通常约0—250 W/m²，冬季湾流和黑潮
+      延伸区在冷、干空气爆发时可超过300 W/m²；最小值出现在弱风、
+      高湿的赤道辐合带或部分极区，可接近0 W/m²。<br><br>
+
+      <strong>Qh：</strong>感热通量通常约−20—100 W/m²，
+      冬季湾流、黑潮及边缘海冷空气爆发区可达到100—200 W/m²；
+      暖空气覆盖较冷海面时可能为负，约−10至−20 W/m²。
+    </p>
+
+    <p>
+      <strong>English answer:</strong><br>
+      These are approximate climatological ranges; exact values vary with
+      season, dataset, and sign convention.<br><br>
+
+      <strong>Qs:</strong> about 0–300 W m⁻². Maxima of roughly
+      250–300 W m⁻² occur in relatively cloud-free tropical and subtropical
+      oceans, while winter polar values can approach zero.<br><br>
+
+      <strong>Qb:</strong> net upward longwave loss is commonly about
+      20–120 W m⁻². Larger values occur over warm, dry, cloud-free
+      subtropical waters, while minima occur in cold polar or humid,
+      cloudy regions.<br><br>
+
+      <strong>Qe:</strong> latent heat loss is commonly about
+      0–250 W m⁻² and may exceed 300 W m⁻² over the Gulf Stream and
+      Kuroshio Extension during winter cold-air outbreaks. It approaches
+      zero in weak-wind, humid regions.<br><br>
+
+      <strong>Qh:</strong> sensible heat flux is commonly about
+      −20 to 100 W m⁻² and can reach 100–200 W m⁻² during strong winter
+      cold-air outbreaks. It may become slightly negative when warm air
+      flows over a colder ocean surface.
+    </p>
+  </div>
+</section>
   </main>
 
   <footer>
     <p>Phytoplankton Bloom · 海洋科学学习网站</p>
   </footer>
 
-  <script>
-    function openPage(pageId) {
-      document.getElementById("home").style.display = "none";
-      document.getElementById("bloom-page").style.display = "none";
-      document.getElementById("notes-page").style.display = "none";
-      document.getElementById(pageId).style.display = "block";
+ <script>
+  function hideAllPages() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("bloom-page").style.display = "none";
+    document.getElementById("notes-page").style.display = "none";
+    document.getElementById("questions-page").style.display = "none";
+  }
 
-      window.location.hash = pageId;
-      window.scrollTo({ top: 300, behavior: "smooth" });
-    }
+  function openPage(pageId) {
+    hideAllPages();
+    document.getElementById(pageId).style.display = "block";
+    window.location.hash = pageId;
+    window.scrollTo({ top: 300, behavior: "smooth" });
+  }
 
-    function goHome() {
-      document.getElementById("bloom-page").style.display = "none";
-      document.getElementById("notes-page").style.display = "none";
-      document.getElementById("home").style.display = "block";
+  function openQuestions() {
+    hideAllPages();
+    document.getElementById("questions-page").style.display = "block";
+    window.location.hash = "questions-page";
+    window.scrollTo({ top: 300, behavior: "smooth" });
+  }
 
-      history.replaceState(null, "", window.location.pathname);
-      window.scrollTo({ top: 300, behavior: "smooth" });
-    }
+  function backToNotes() {
+    hideAllPages();
+    document.getElementById("notes-page").style.display = "block";
+    window.location.hash = "notes-page";
+    window.scrollTo({ top: 300, behavior: "smooth" });
+  }
 
-    if (window.location.hash === "#bloom-page") {
-      openPage("bloom-page");
-    }
+  function goHome() {
+    hideAllPages();
+    document.getElementById("home").style.display = "block";
+    history.replaceState(null, "", window.location.pathname);
+    window.scrollTo({ top: 300, behavior: "smooth" });
+  }
 
-    if (window.location.hash === "#notes-page") {
-      openPage("notes-page");
-    }
-  </script>
+  if (window.location.hash === "#bloom-page") {
+    openPage("bloom-page");
+  } else if (window.location.hash === "#notes-page") {
+    openPage("notes-page");
+  } else if (window.location.hash === "#questions-page") {
+    openQuestions();
+  }
+</script>
 </body>
 </html>
