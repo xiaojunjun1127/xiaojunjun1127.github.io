@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海洋学习笔记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+            background-color: #f0f7f9;
+            color: #2c3e50;
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #104b5c;
+            margin-bottom: 30px;
+            font-size:34px;
+            letter-spacing:2px;
+        }
+        /* 导航目录样式 */
+        .nav{
+            text-align:center;
+            margin-bottom:40px;
+        }
+        .nav a{
+            display:inline-block;
+            margin:0 15px;
+            padding:8px 16px;
+            background:#18647a;
+            color:white;
+            text-decoration:none;
+            border-radius:20px;
+        }
+        .nav a:hover{
+            background:#48a1b8;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding:32px;
+            margin-bottom:30px;
+            box-shadow: 0 4px 12px rgba(16,75,92,0.1);
+        }
+        .card h2 {
+            color:#18647a;
+            border-left:5px solid #48a1b8;
+            padding-left:14px;
+            margin-bottom:20px;
+        }
+        h3{
+            color:#29788c;
+            margin:18px 0 10px;
+        }
+        p{
+            margin-bottom:12px;
+        }
+        ul{
+            padding-left:24px;
+            margin-bottom:16px;
+        }
+        .tip{
+            color:#666;
+            font-style:italic;
+            background:#f3fafc;
+            padding:10px;
+            border-radius:8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>海洋学习笔记</h1>
+        <!-- 点击跳转的目录 -->
+        <div class="nav">
+            🌊 Phytoplankton bloom
+            📖 出门票｜课堂笔记
+        </div>
+
+        <div class="card" id="bloom">
+            <h2>🌊 Phytoplankton bloom 浮游植物藻华</h2>
+            <p>藻华是水体中浮游藻类在适宜环境下快速增殖爆发的现象，硅藻、甲藻、蓝藻是主要类群，和海洋生物泵、海洋碳汇紧密相关。</p >
+            <h3>当前内容</h3>
+            <ul>
+                <li>硅藻诱导钙化机制</li>
+                <li>藻华驱动的海洋碳汇过程</li>
+                <li>环境影响因子：营养盐、温度、光照、水体层结</li>
+            </ul>
+            <p class="tip">【预留视频位置：后续可在此插入藻华相关视频】</p >
+        </div>
+
+        <div class="card" id="note">
+            <h2>📖 出门票｜课堂学习笔记</h2>
+            <p>这里存放课程学习、文献阅读、课堂整理的知识点。</p >
+            <h3>待录入</h3>
+            <ul>
+                <li>课程知识点1</li>
+                <li>课程知识点2</li>
+                <li>文献摘要整理</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
